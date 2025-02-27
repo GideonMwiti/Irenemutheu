@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irene Mutheu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .animate-fade-in { animation: fadeIn 1s ease-in; }
+        
+        .mobile-menu { display: none; }
+        .show-menu { display: block; }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-rose-50 to-indigo-50">
+    <!-- Navigation -->
+<nav class="fixed w-full bg-white shadow-lg z-50">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <div class="flex items-center">
+            <span class="text-xl font-bold text-rose-600">IRENE MUTHEU</span>
+        </div>
+        
+        <div class="hidden md:flex space-x-8">
+            <a href="#home" class="text-gray-600 font-bold hover:text-rose-600 flex items-center">
+                <i class="fas fa-home mr-2"></i> Home
+            </a>
+            <a href="#about" class="text-gray-600 font-bold hover:text-rose-600 flex items-center">
+                <i class="fas fa-user mr-2"></i> About
+            </a>
+            <a href="#what-i-do" class="text-gray-600 font-bold hover:text-rose-600 flex items-center">
+                <i class="fas fa-tasks mr-2"></i> What I Do
+            </a>
+            <a href="#testimonials" class="text-gray-600 font-bold hover:text-rose-600 flex items-center">
+                <i class="fas fa-comment-alt mr-2"></i> Testimonials
+            </a>
+            <a href="#gallery" class="text-gray-600 font-bold hover:text-rose-600 flex items-center">
+                <i class="fas fa-images mr-2"></i> Gallery
+            </a>
+            <a href="#contact" class="text-gray-600 font-bold hover:text-rose-600 flex items-center">
+                <i class="fas fa-envelope mr-2"></i> Contact
+            </a>
+        </div>
+        
+        <div class="md:hidden">
+            <button id="menuBtn" class="text-gray-600">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu md:hidden bg-white">
+        <div class="px-4 py-2 space-y-4">
+            <a href="#home" class="block text-gray-600 font-bold flex items-center">
+                <i class="fas fa-home mr-2"></i> Home
+            </a>
+            <a href="#about" class="block text-gray-600 font-bold flex items-center">
+                <i class="fas fa-user mr-2"></i> About
+            </a>
+            <a href="#what-i-do" class="block text-gray-600 font-bold flex items-center">
+                <i class="fas fa-tasks mr-2"></i> What I Do
+            </a>
+            <a href="#testimonials" class="block text-gray-600 font-bold flex items-center">
+                <i class="fas fa-comment-alt mr-2"></i> Testimonials
+            </a>
+            <a href="#gallery" class="block text-gray-600 font-bold flex items-center">
+                <i class="fas fa-images mr-2"></i> Gallery
+            </a>
+            <a href="#contact" class="block text-gray-600 font-bold flex items-center">
+                <i class="fas fa-envelope mr-2"></i> Contact
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!-- Font Awesome for Icons -->
+<script src="https://kit.fontawesome.com/YOUR_FA_KIT.js" crossorigin="anonymous"></script>
+
+    <!-- Home Section -->
+<section id="home" class="min-h-screen relative pt-24">
+    <!-- Background Image with optimized display -->
+    <div class="absolute inset-0 z-0">
+        <img src="background.jpg" 
+             alt="Runway Background" 
+             class="w-full h-full object-cover object-center image-sharp">
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+    </div>
+    <!-- Content -->
+    <div class="relative z-10 container mx-auto px-4 h-full flex flex-col items-center justify-center">
+        <!-- Profile Image -->
+        <div class="mb-8 animate-fade-in transform transition duration-500 hover:scale-105">
+            <img src="profile.jpg" 
+                 alt="Irene Mutheu" 
+                 class="rounded-full h-64 w-64 md:h-80 md:w-80 object-cover border-8 border-white shadow-2xl">
+        </div>
+
+        <!-- Text Content -->
+        <div class="text-center text-white animate-fade-in">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                Hi, I'm <span class="text-rose-400">Irene Mutheu</span>
+            </h1>
+            <p id="roleText" class="text-xl md:text-2xl mb-8"></p>
+        </div>
+            <a href="https://drive.google.com/uc?export=download&id=1pQBUC8BaTY3aq9jrtPimk_6st6k0SWtV" download>
+                <button class="bg-rose-600 hover:bg-rose-700 text-white px-8 py-3 rounded-full transition-transform transform hover:scale-105">
+                  Download CV
+                </button>
+              </a>
+        </div>
+    </div>
+</section>
+
+   <!-- About Section -->
+<section id="about" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
+        
+        <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <!-- Biography Card -->
+            <div class="bg-rose-50 p-8 rounded-xl shadow-lg animate-fade-in">
+                <h3 class="text-2xl font-bold text-rose-600 mb-4">About Me</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Hello, I'm Irene Mutheu Sila, a professional model based in Kisii, Kenya. With 2 years of experience in the fashion industry, I've had the privilege of collaborating with renowned designers, photographers, and brands across diverse projects.
+
+My modeling journey began with a passion for runway fashion and editorial photography, leading me to work with esteemed clients such as Phanaka Arts Production. My versatility spans various genres, including  commercial and runway modeling, allowing me to adapt seamlessly to different creative visions.
+
+Beyond the camera, I am committed to promoting body positivity and diversity within the industry. I believe in the power of fashion as a medium for self-expression and cultural representation.
+
+In addition to my modeling career, I am pursuing a degree in Project Planning & Management, which has enriched my understanding of the industry from multiple perspectives.
+
+Beyond the runway, i am passionate about exploring new cultures through travelling, capturing moments via photography and experimenting with culinary arts 
+
+I am always eager to connect with fellow creatives and explore new opportunities. Feel free to reach out to discuss potential collaborations or projects.
+                </p>
+                
+            </div>
+
+            <!-- Experience Timeline -->
+            <div class="space-y-8 animate-fade-in">
+                <!-- Education Card -->
+                <div class="bg-indigo-50 p-6 rounded-xl shadow-lg">
+                    <div class="flex items-start">
+                        <div class="bg-indigo-600 p-3 rounded-lg mr-4">
+                            <i class="fas fa-graduation-cap text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">Education</h4>
+                            <div class="space-y-2">
+                                <p class="font-semibold">Kisii University</p>
+                                <p class="text-sm text-gray-600">Bachelor of Project Planning & Management (2023-Present)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Card -->
+                <div class="bg-rose-50 p-6 rounded-xl shadow-lg">
+                    <div class="flex items-start">
+                        <div class="bg-rose-600 p-3 rounded-lg mr-4">
+                            <i class="fas fa-briefcase text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">Experience</h4>
+                            <div class="space-y-2">
+                                <div>
+                                    <p class="font-semibold">Pageant Model - Modelling Association of Kisii University (MAKSU)</p>
+                                    <p class="text-sm text-gray-600">2024-Present</p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Actress - Phanaka Arts Production</p>
+                                    <p class="text-sm text-gray-600">2023-Present</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Card -->
+                <div class="bg-indigo-50 p-6 rounded-xl shadow-lg">
+                    <div class="flex items-start">
+                        <div class="bg-indigo-600 p-3 rounded-lg mr-4">
+                            <i class="fas fa-star text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">Skills</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">
+                                   Adaptability & Creativity
+                                </span>
+                                <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">
+                                    Posing & Body Awareness
+                                </span>
+                                <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">
+                                    Communication & Social Media Presence
+                                </span>
+                                <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">
+                                    Resilience & Perseverance
+                                </span>
+                                <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">
+                                    Technical Proficiency
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- What I Do Section -->
+    <section id="what-i-do" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">What I Do</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 bg-rose-50 rounded-lg">
+                    <i class="fas fa-camera text-4xl text-rose-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Fashion Modeling</h3>
+                    <p class="text-gray-600">Runway, editorial, and commercial modeling services</p>
+                </div>
+                <div class="p-6 bg-rose-50 rounded-lg">
+                    <i class="fas fa-film text-4xl text-rose-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Acting</h3>
+                    <p class="text-gray-600">Film, television, and theater performances</p>
+                </div>
+                <div class="p-6 bg-rose-50 rounded-lg">
+                    <i class="fas fa-users text-4xl text-rose-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Brand Partnerships</h3>
+                    <p class="text-gray-600">Brand ambassadorship and product endorsements</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Testimonials Section -->
+<section id="testimonials" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Testimonials</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <!-- Modeling Testimonial 1 -->
+            <div class="bg-rose-50 p-6 rounded-xl shadow-lg hover:transform hover:-translate-y-2 transition-all">
+                <div class="flex flex-col items-center mb-4">
+                    <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg" 
+                         alt="Client" 
+                         class="w-20 h-20 rounded-full object-cover mb-4 border-4 border-white shadow">
+                    <h4 class="text-lg font-bold">Alexina Ayega</h4>
+                    <p class="text-sm text-rose-600">Mrs Tourism Kisii 2023/2024</p>
+                    <p>0718316212</p>
+                </div>
+                <p class="text-gray-600 italic text-center">
+                    "Irene brought our collection to life with her incredible runway presence. Her professionalism and adaptability made her a pleasure to work with."
+                </p>
+            </div>
+
+            <!-- Modeling Testimonial 2 -->
+            <div class="bg-rose-50 p-6 rounded-xl shadow-lg hover:transform hover:-translate-y-2 transition-all">
+                <div class="flex flex-col items-center mb-4">
+                    <img src="steve.png" 
+                         alt="Client" 
+                         class="w-20 h-20 rounded-full object-cover mb-4 border-4 border-white shadow">
+                    <h4 class="text-lg font-bold">Steve Odhiambo</h4>
+                    <p class="text-sm text-rose-600">Mr Kisii University 2018/2019</p>
+                    <p>0112078373</p>
+                </div>
+                <p class="text-gray-600 italic text-center">
+                    "Her ability to convey emotion through the camera is exceptional. Irene's versatility makes her perfect for any creative project."
+                </p>
+            </div>
+
+            <!-- Acting Testimonial -->
+            <div class="bg-rose-50 p-6 rounded-xl shadow-lg hover:transform hover:-translate-y-2 transition-all">
+                <div class="flex flex-col items-center mb-4">
+                    <img src="danzie.jpg" 
+                         alt="Client" 
+                         class="w-20 h-20 rounded-full object-cover mb-4 border-4 border-white shadow">
+                    <h4 class="text-lg font-bold">Danzie Ledama</h4>
+                    <p class="text-sm text-rose-600">Film Director Phanaka Arts Production</p>
+                    <p> 0707246287</p>
+                </div>
+                <p class="text-gray-600 italic text-center">
+                    "Irene's dedication to character development is remarkable. She brings depth and authenticity to every role she plays."
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Gallery Section -->
+<section id="gallery" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Gallery</h2>
+      
+      <!-- Tab Labels -->
+      <div class="flex justify-center mb-8">
+        <button id="momentsTab" class="px-4 py-2 mx-2 font-bold text-gray-700 border-b-2 border-transparent focus:outline-none hover:bg-gray-200 transition-colors duration-300">
+          Moments
+        </button>
+        <button id="snapshotsTab" class="px-4 py-2 mx-2 font-bold text-gray-700 border-b-2 border-transparent focus:outline-none hover:bg-gray-200 hover:border-rose-600 transition-colors duration-300">
+          Snapshots
+        </button>
+      </div>
+      
+      <!-- Moments Section -->
+      <div id="momentsSection">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          <!-- Mr & Mrs Kisii University -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-fade-in">
+            <div class="relative group h-[500px]">
+              <img src="mrs kisii.jpg" 
+                   alt="Mr & Mrs Kisii University" 
+                   class="w-full h-full object-cover object-top">
+              <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-6">
+                <p class="text-white text-center text-lg">
+                  Contestant in Mr & Mrs Kisii University 2025/2026
+                </p>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-rose-600 mb-2">
+                Mr & Miss Kisii University 2025/2026
+              </h3>
+              <p class="text-gray-600">
+                Contested in the highly competitive Mr & Miss Kisii University, held annually, showcasing exceptional talent, grace, and leadership skills while embodying cultural pride and academic excellence.
+              </p>
+            </div>
+          </div>
+  
+          <!-- Miss Tourism Kisii -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-fade-in">
+            <div class="relative group h-[500px]">
+              <img src="mrs tourism.jpg" 
+                   alt="Miss Tourism Kisii" 
+                   class="w-full h-full object-cover object-top">
+              <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-6">
+                <p class="text-white text-center text-lg">
+                  Finalist in Miss Tourism Kisii 2025/2026
+                </p>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-rose-600 mb-2">
+                Miss Tourism Kisii 2025/2026
+              </h3>
+              <p class="text-gray-600">
+                Advanced to the finals of the highly contested Mr & Miss Tourism competitions, which attracted over 50 participants, showcasing exceptional poise, talent, and a passion for promoting local cultural heritage and sustainable tourism.
+              </p>
+            </div>
+          </div>
+  
+          <!-- Photo Phanatic -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-fade-in">
+            <div class="relative group h-[500px]">
+              <img src="gallery1.jpg" 
+                   alt="Queen of the runway" 
+                   class="w-full h-full object-cover object-top">
+              <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-6">
+                <p class="text-white text-center text-lg">
+                  Photo of the year 2024/2025
+                </p>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-rose-600 mb-2">
+                Photo Phanatic
+              </h3>
+              <p class="text-gray-600">
+                Photos help us recall moments more accurately since our memories are fallible. "The human brain is not a passive storage system. It's both active and dynamic.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Snapshots Section -->
+      <div id="snapshotsSection" class="hidden">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-fade-in">
+            <div class="relative group h-96">
+              <img src="gallery2.jpg" 
+                   alt="Snapshot 1" 
+                   class="w-full h-full object-cover object-top">
+              <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </div>
+          </div>
+  
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-fade-in">
+            <div class="relative group h-96">
+              <img src="gallery3.jpg" 
+                   alt="Snapshot 2" 
+                   class="w-full h-full object-cover object-top">
+              <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </div>
+          </div>
+  
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-fade-in">
+            <div class="relative group h-96">
+              <img src="gallery4.jpg" 
+                   alt="Snapshot 3" 
+                   class="w-full h-full object-cover object-top">
+              <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </div>
+          </div>
+  
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-fade-in">
+            <div class="relative group h-96">
+              <img src="gallery5.jpg"  
+                   alt="Snapshot 4" 
+                   class="w-full h-full object-cover object-top">
+              <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </div>
+          </div>
+  
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-fade-in">
+            <div class="relative group h-96">
+              <img src="gallery6.jpg"  
+                   alt="Snapshot 5" 
+                   class="w-full h-full object-cover object-top">
+              <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </div>
+          </div>
+  
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-fade-in">
+            <div class="relative group h-96">
+              <img src="gallery7.jpg" 
+                   alt="Snapshot 6" 
+                   class="w-full h-full object-cover object-top">
+              <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+   <!-- Contact Section -->
+<section id="contact" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Contact Me</h2>
+      <form class="max-w-lg mx-auto" action="https://formspree.io/f/xbldnjdw" method="POST">
+        <div class="mb-4">
+          <input type="text" name="name" placeholder="Your Name" class="w-full p-3 border rounded" required>
+        </div>
+        <div class="mb-4">
+          <input type="email" name="email" placeholder="Your Email" class="w-full p-3 border rounded" required>
+        </div>
+        <div class="mb-4">
+          <textarea name="message" placeholder="Your Message" class="w-full p-3 border rounded h-32" required></textarea>
+        </div>
+        <button type="submit" class="bg-rose-600 text-white px-8 py-3 rounded hover:bg-rose-700 w-full md:w-auto">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+  
+
+    <!-- Footer -->
+    <footer class="bg-rose-600 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex space-x-6 mb-4 md:mb-0">
+                    <a href="https://www.instagram.com/mutheu9924/" target="_blank" rel="noopener noreferrer" class="hover:text-rose-200 transition">
+                        <i class="fab fa-instagram text-2xl"></i>
+                      </a>
+                      <a href="https://www.facebook.com/mutheu9924" target="_blank" rel="noopener noreferrer" class="hover:text-rose-200 transition">
+                        <i class="fab fa-facebook text-2xl"></i>
+                      </a>
+                      <a href="https://www.tiktok.com/@irynemutheu159" target="_blank" rel="noopener noreferrer" class="hover:text-rose-200 transition">
+                        <i class="fab fa-tiktok text-2xl"></i>
+                      </a>
+                      <a href="https://wa.me/254798627143?text=Hello%20I%20am%20interested%20in%20your%20services" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      class="hover:text-rose-200 transition" 
+                      aria-label="WhatsApp">
+                     <i class="fab fa-whatsapp text-2xl"></i>
+                   </a>                   
+                      <a href="mailto:mutheui866@gmail.com" class="hover:text-rose-200 transition">
+                        <i class="fas fa-envelope text-2xl"></i>
+                      </a>
+                      
+                </div>
+                <div class="text-center">
+                    <p>&copy; <span id="currentYear"></span> Irene Mutheu. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('show-menu');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('show-menu');
+            });
+        });
+
+        
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach((section) => {
+            observer.observe(section);
+        });
+    </script>
+<script>
+    const momentsTab = document.getElementById('momentsTab');
+    const snapshotsTab = document.getElementById('snapshotsTab');
+    const momentsSection = document.getElementById('momentsSection');
+    const snapshotsSection = document.getElementById('snapshotsSection');
+  
+    momentsTab.addEventListener('click', () => {
+      momentsSection.classList.remove('hidden');
+      snapshotsSection.classList.add('hidden');
+      momentsTab.classList.add('border-rose-600');
+      snapshotsTab.classList.remove('border-rose-600');
+    });
+  
+    snapshotsTab.addEventListener('click', () => {
+      snapshotsSection.classList.remove('hidden');
+      momentsSection.classList.add('hidden');
+      snapshotsTab.classList.add('border-rose-600');
+      momentsTab.classList.remove('border-rose-600');
+    });
+  </script>
+<script>
+    const roles = ["Peagent Modell", "Actresss", "Influencerr", "Brand Ambassadorr"];
+    let index = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+  
+    function typeEffect() {
+      const roleTextElement = document.getElementById("roleText");
+      const currentRole = roles[index];
+  
+      if (isDeleting) {
+        roleTextElement.textContent = currentRole.substring(0, charIndex--);
+      } else {
+        roleTextElement.textContent = currentRole.substring(0, charIndex++);
+      }
+  
+      let typingSpeed = isDeleting ? 50 : 100;
+  
+      if (!isDeleting && charIndex === currentRole.length) {
+        typingSpeed = 2000; 
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        index = (index + 1) % roles.length; 
+        typingSpeed = 500; 
+      }
+  
+      setTimeout(typeEffect, typingSpeed);
+    }
+  
+    document.addEventListener("DOMContentLoaded", typeEffect);
+  </script>
+</body>
+</html>
