@@ -1,7 +1,6 @@
 # Irenemutheu
 
 A static website project built with HTML, Tailwind CSS, and JavaScript. This project features an interactive gallery, responsive design, and dynamic content. It is deployed on Netlify ([View website](https://irenemutheu.netlify.app/)).
-
 ## Developed By
 **Gideon Mwiti**  
 Email: mwitigideon002@gmail.com  
