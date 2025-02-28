@@ -7,6 +7,7 @@ A static website project built with HTML, Tailwind CSS, and JavaScript. This pro
 Email: mwitigideon002@gmail.com  
 Website: [gideonmwiti.netlify.app](https://gideonmwiti.netlify.app/)  
 LinkedIn: [GideonMwiti](https://www.linkedin.com/in/GideonMwiti)
+
 phone: [+254798985389]
 ## Project For
 Irene Mutheu 
