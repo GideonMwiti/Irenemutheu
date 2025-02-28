@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
+<!-- Meta Information --> 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <title>Irene Mutheu</title>
+    
+ <!-- External Resources -->    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+ <!-- Custom Styles -->   
     <style>
         @keyframes fadeIn {
             from { opacity: 0; }
@@ -16,15 +22,21 @@
         .mobile-menu { display: none; }
         .show-menu { display: block; }
     </style>
+
 </head>
+
 <body class="bg-gradient-to-r from-rose-50 to-indigo-50">
-    <!-- Navigation -->
-<nav class="fixed w-full bg-white shadow-lg z-50">
+
+<!-- ========== Navigation Section ========== -->
+    <nav class="fixed w-full bg-white shadow-lg z-50">
     <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-        <div class="flex items-center">
-            <span class="text-xl font-bold text-rose-600">IRENE MUTHEU</span>
-        </div>
         
+<!-- Brand Logo -->      
+      <div class="flex items-center">
+            <span class="text-xl font-bold text-rose-600">IRENE MUTHEU</span>
+      </div>
+        
+<!-- Desktop Navigation -->        
         <div class="hidden md:flex space-x-8">
             <a href="#home" class="text-gray-600 font-bold hover:text-rose-600 flex items-center">
                 <i class="fas fa-home mr-2"></i> Home
@@ -46,17 +58,20 @@
             </a>
         </div>
         
+<!-- Mobile Menu Toggle -->        
         <div class="md:hidden">
             <button id="menuBtn" class="text-gray-600">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
         </div>
-    </div>
+        </div>
     
-    <!-- Mobile Menu -->
+<!-- Mobile Navigation -->
     <div id="mobileMenu" class="mobile-menu md:hidden bg-white">
-        <div class="px-4 py-2 space-y-4">
-            <a href="#home" class="block text-gray-600 font-bold flex items-center">
+    <div class="px-4 py-2 space-y-4">
+            
+<!-- Mobile menu items -->          
+          <a href="#home" class="block text-gray-600 font-bold flex items-center">
                 <i class="fas fa-home mr-2"></i> Home
             </a>
             <a href="#about" class="block text-gray-600 font-bold flex items-center">
@@ -81,25 +96,30 @@
 <!-- Font Awesome for Icons -->
 <script src="https://kit.fontawesome.com/YOUR_FA_KIT.js" crossorigin="anonymous"></script>
 
-    <!-- Home Section -->
+<!-- ========== Main Content Sections ========== -->    
+ 
+<!-- Hero Section -->
 <section id="home" class="min-h-screen relative pt-24">
-    <!-- Background Image with optimized display -->
+
+<!-- Background Image -->  
     <div class="absolute inset-0 z-0">
         <img src="background.jpg" 
              alt="Runway Background" 
              class="w-full h-full object-cover object-center image-sharp">
         <div class="absolute inset-0 bg-black opacity-40"></div>
     </div>
-    <!-- Content -->
+
+<!-- Hero Content -->    
     <div class="relative z-10 container mx-auto px-4 h-full flex flex-col items-center justify-center">
-        <!-- Profile Image -->
+
+<!-- Profile Image -->    
         <div class="mb-8 animate-fade-in transform transition duration-500 hover:scale-105">
             <img src="profile.jpg" 
                  alt="Irene Mutheu" 
                  class="rounded-full h-64 w-64 md:h-80 md:w-80 object-cover border-8 border-white shadow-2xl">
         </div>
 
-        <!-- Text Content -->
+<!-- Headline and CTAs -->
         <div class="text-center text-white animate-fade-in">
             <h1 class="text-4xl md:text-6xl font-bold mb-4">
                 Hi, I'm <span class="text-rose-400">Irene Mutheu</span>
@@ -110,77 +130,87 @@
                 <button class="bg-rose-600 hover:bg-rose-700 text-white px-8 py-3 rounded-full transition-transform transform hover:scale-105">
                   Download CV
                 </button>
-              </a>
+            </a>
         </div>
-    </div>
+        </div>
 </section>
 
-   <!-- About Section -->
-<section id="about" class="py-16 bg-white">
-    <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
+<!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+    
+<!-- Section content -->    
+      <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
         
         <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <!-- Biography Card -->
+
+<!-- Biography Card -->
             <div class="bg-rose-50 p-8 rounded-xl shadow-lg animate-fade-in">
                 <h3 class="text-2xl font-bold text-rose-600 mb-4">About Me</h3>
                 <p class="text-gray-600 leading-relaxed">
                     Hello, I'm Irene Mutheu Sila, a professional model based in Kisii, Kenya. With 2 years of experience in the fashion industry, I've had the privilege of collaborating with renowned designers, photographers, and brands across diverse projects.
 
-My modeling journey began with a passion for runway fashion and editorial photography, leading me to work with esteemed clients such as Phanaka Arts Production. My versatility spans various genres, including  commercial and runway modeling, allowing me to adapt seamlessly to different creative visions.
+                    My modeling journey began with a passion for runway fashion and editorial photography, leading me to work with esteemed clients such as Phanaka Arts Production. My versatility spans various genres, including  commercial and runway modeling, allowing me to adapt seamlessly to different creative visions.
 
-Beyond the camera, I am committed to promoting body positivity and diversity within the industry. I believe in the power of fashion as a medium for self-expression and cultural representation.
+                    Beyond the camera, I am committed to promoting body positivity and diversity within the industry. I believe in the power of fashion as a medium for self-expression and cultural representation.
 
-In addition to my modeling career, I am pursuing a degree in Project Planning & Management, which has enriched my understanding of the industry from multiple perspectives.
+                    In addition to my modeling career, I am pursuing a degree in Project Planning & Management, which has enriched my understanding of the industry from multiple perspectives.
 
-Beyond the runway, i am passionate about exploring new cultures through travelling, capturing moments via photography and experimenting with culinary arts 
+                    Beyond the runway, i am passionate about exploring new cultures through travelling, capturing moments via photography and experimenting with culinary arts 
 
-I am always eager to connect with fellow creatives and explore new opportunities. Feel free to reach out to discuss potential collaborations or projects.
+                    I am always eager to connect with fellow creatives and explore new opportunities. Feel free to reach out to discuss potential collaborations or projects.
                 </p>
                 
             </div>
 
-            <!-- Experience Timeline -->
+<!-- Experience Timeline -->
             <div class="space-y-8 animate-fade-in">
-                <!-- Education Card -->
+                
+<!-- Education Card -->
                 <div class="bg-indigo-50 p-6 rounded-xl shadow-lg">
-                    <div class="flex items-start">
+                    
+                  <div class="flex items-start">
                         <div class="bg-indigo-600 p-3 rounded-lg mr-4">
                             <i class="fas fa-graduation-cap text-white text-xl"></i>
-                        </div>
-                        <div>
+                    </div>
+                     
+                    <div>
                             <h4 class="text-xl font-bold mb-2">Education</h4>
                             <div class="space-y-2">
                                 <p class="font-semibold">Kisii University</p>
                                 <p class="text-sm text-gray-600">Bachelor of Project Planning & Management (2023-Present)</p>
-                            </div>
+                        </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Experience Card -->
+<!-- Experience Card -->
                 <div class="bg-rose-50 p-6 rounded-xl shadow-lg">
-                    <div class="flex items-start">
-                        <div class="bg-rose-600 p-3 rounded-lg mr-4">
-                            <i class="fas fa-briefcase text-white text-xl"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-xl font-bold mb-2">Experience</h4>
-                            <div class="space-y-2">
-                                <div>
-                                    <p class="font-semibold">Pageant Model - Modelling Association of Kisii University (MAKSU)</p>
-                                    <p class="text-sm text-gray-600">2024-Present</p>
-                                </div>
-                                <div>
-                                    <p class="font-semibold">Actress - Phanaka Arts Production</p>
-                                    <p class="text-sm text-gray-600">2023-Present</p>
-                                </div>
+                <div class="flex items-start">
+                    
+                      <div class="bg-rose-600 p-3 rounded-lg mr-4">
+                        <i class="fas fa-briefcase text-white text-xl"></i>
+                    </div>
+                        
+                    <div>
+                      <h4 class="text-xl font-bold mb-2">Experience</h4>
+                    <div class="space-y-2">
+                    
+                      <div>
+                         <p class="font-semibold">Pageant Model - Modelling Association of Kisii University (MAKSU)</p>
+                         <p class="text-sm text-gray-600">2024-Present</p>
+                      </div>
+                                
+                      <div>
+                        <p class="font-semibold">Actress - Phanaka Arts Production</p>
+                        <p class="text-sm text-gray-600">2023-Present</p>
+                      </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Skills Card -->
+<!-- Skills Card -->
                 <div class="bg-indigo-50 p-6 rounded-xl shadow-lg">
                     <div class="flex items-start">
                         <div class="bg-indigo-600 p-3 rounded-lg mr-4">
@@ -213,7 +243,7 @@ I am always eager to connect with fellow creatives and explore new opportunities
     </div>
 </section>
 
-    <!-- What I Do Section -->
+<!-- What I Do Section -->
     <section id="what-i-do" class="py-16">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12">What I Do</h2>
@@ -237,13 +267,13 @@ I am always eager to connect with fellow creatives and explore new opportunities
         </div>
     </section>
 
-   <!-- Testimonials Section -->
+<!-- Testimonials Section -->
 <section id="testimonials" class="py-16 bg-white">
     <div class="container mx-auto px-4">
         <h2 class="text-3xl font-bold text-center mb-12">Testimonials</h2>
         <div class="grid md:grid-cols-3 gap-8">
 
-            <!-- Modeling Testimonial 1 -->
+<!-- Testimonial 1 -->
             <div class="bg-rose-50 p-6 rounded-xl shadow-lg hover:transform hover:-translate-y-2 transition-all">
                 <div class="flex flex-col items-center mb-4">
                     <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg" 
@@ -258,7 +288,7 @@ I am always eager to connect with fellow creatives and explore new opportunities
                 </p>
             </div>
 
-            <!-- Modeling Testimonial 2 -->
+<!-- Testimonial 2 -->
             <div class="bg-rose-50 p-6 rounded-xl shadow-lg hover:transform hover:-translate-y-2 transition-all">
                 <div class="flex flex-col items-center mb-4">
                     <img src="steve.png" 
@@ -273,7 +303,7 @@ I am always eager to connect with fellow creatives and explore new opportunities
                 </p>
             </div>
 
-            <!-- Acting Testimonial -->
+<!-- Testimonial 3 -->
             <div class="bg-rose-50 p-6 rounded-xl shadow-lg hover:transform hover:-translate-y-2 transition-all">
                 <div class="flex flex-col items-center mb-4">
                     <img src="danzie.jpg" 
@@ -291,12 +321,13 @@ I am always eager to connect with fellow creatives and explore new opportunities
         </div>
     </div>
 </section>
+
 <!-- Gallery Section -->
 <section id="gallery" class="py-16 bg-gray-50">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold text-center mb-12">Gallery</h2>
       
-      <!-- Tab Labels -->
+<!-- Tab Labels -->
       <div class="flex justify-center mb-8">
         <button id="momentsTab" class="px-4 py-2 mx-2 font-bold text-gray-700 border-b-2 border-transparent focus:outline-none hover:bg-gray-200 transition-colors duration-300">
           Moments
@@ -306,10 +337,11 @@ I am always eager to connect with fellow creatives and explore new opportunities
         </button>
       </div>
       
-      <!-- Moments Section -->
+<!-- Moments Section -->
       <div id="momentsSection">
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          <!-- Mr & Mrs Kisii University -->
+
+<!-- Mr & Mrs Kisii University -->
           <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-fade-in">
             <div class="relative group h-[500px]">
               <img src="mrs kisii.jpg" 
@@ -331,7 +363,7 @@ I am always eager to connect with fellow creatives and explore new opportunities
             </div>
           </div>
   
-          <!-- Miss Tourism Kisii -->
+<!-- Miss Tourism Kisii -->
           <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-fade-in">
             <div class="relative group h-[500px]">
               <img src="mrs tourism.jpg" 
@@ -353,7 +385,7 @@ I am always eager to connect with fellow creatives and explore new opportunities
             </div>
           </div>
   
-          <!-- Photo Phanatic -->
+<!-- Photo Phanatic -->
           <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-fade-in">
             <div class="relative group h-[500px]">
               <img src="gallery1.jpg" 
@@ -377,7 +409,7 @@ I am always eager to connect with fellow creatives and explore new opportunities
         </div>
       </div>
       
-      <!-- Snapshots Section -->
+<!-- Snapshots Section -->
       <div id="snapshotsSection" class="hidden">
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-fade-in">
@@ -438,7 +470,7 @@ I am always eager to connect with fellow creatives and explore new opportunities
     </div>
   </section>
   
-   <!-- Contact Section -->
+<!-- Contact Section -->
 <section id="contact" class="py-16 bg-white">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold text-center mb-12">Contact Me</h2>
@@ -460,7 +492,7 @@ I am always eager to connect with fellow creatives and explore new opportunities
   </section>
   
 
-    <!-- Footer -->
+<!-- Footer -->
     <footer class="bg-rose-600 text-white py-8">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
@@ -493,6 +525,8 @@ I am always eager to connect with fellow creatives and explore new opportunities
         </div>
     </footer>
 
+  <!-- Javascript Section -->  
+    
     <script>
         // Mobile Menu Toggle
         const menuBtn = document.getElementById('menuBtn');
@@ -539,7 +573,7 @@ I am always eager to connect with fellow creatives and explore new opportunities
             observer.observe(section);
         });
     </script>
-<script>
+    <script>
     const momentsTab = document.getElementById('momentsTab');
     const snapshotsTab = document.getElementById('snapshotsTab');
     const momentsSection = document.getElementById('momentsSection');
@@ -559,7 +593,7 @@ I am always eager to connect with fellow creatives and explore new opportunities
       momentsTab.classList.remove('border-rose-600');
     });
   </script>
-<script>
+  <script>
     const roles = ["Peagent Modell", "Actresss", "Influencerr", "Brand Ambassadorr"];
     let index = 0;
     let charIndex = 0;
