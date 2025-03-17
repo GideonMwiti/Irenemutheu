@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irene Mutheu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .animate-fade-in { animation: fadeIn 1s ease-in; }
+        
+        .mobile-menu { display: none; }
+        .show-menu { display: block; }
+    </style>
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+</head>
+<body class="bg-gradient-to-r from-rose-50 to-indigo-50">
+   <!-- Navigation -->
+<nav class="fixed w-full bg-white shadow-lg z-50">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <div class="flex items-center">
+            <img src="logo.png" alt="Irene Mutheu Logo" class="h-10 w-auto">
+        </div>
+        
+        
+        <div class="hidden md:flex space-x-8">
+            <a href="#home" class="text-gray-600 hover:text-rose-600 font-bold">Home</a>
+            <a href="#about" class="text-gray-600 hover:text-rose-600 font-bold">About</a>
+            <a href="#what-i-do" class="text-gray-600 hover:text-rose-600 font-bold">What I Do</a>
+            <a href="#testimonials" class="text-gray-600 hover:text-rose-600 font-bold">Testimonials</a>
+            <a href="#gallery" class="text-gray-600 hover:text-rose-600 font-bold">Gallery</a>
+            <a href="#contact" class="text-gray-600 hover:text-rose-600 font-bold">Contact</a>
+        </div>
+        
+        <div class="md:hidden">
+            <button id="menuBtn" class="text-gray-600">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu md:hidden bg-white">
+        <div class="px-4 py-2 space-y-4">
+            <a href="#home" class="block text-gray-600 font-bold">Home</a>
+            <a href="#about" class="block text-gray-600 font-bold">About</a>
+            <a href="#what-i-do" class="block text-gray-600 font-bold">What I Do</a>
+            <a href="#testimonials" class="block text-gray-600 font-bold">Testimonials</a>
+            <a href="#gallery" class="block text-gray-600 font-bold">Gallery</a>
+            <a href="#contact" class="block text-gray-600 font-bold">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Home Section -->
+<section id="home" class="min-h-screen relative pt-24">
+    <!-- Background Image with optimized display -->
+    <div class="absolute inset-0 z-0">
+        <img src="background.jpg" 
+             alt="Runway Background" 
+             class="w-full h-full object-cover object-center image-sharp">
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+    </div>
+
+    <!-- Unchanged Content Section -->
+    <div class="relative z-10 container mx-auto px-4 h-full flex flex-col items-center justify-center">
+        <!-- Original Profile Image -->
+        <div class="mb-8 animate-fade-in">
+            <img src="profile.jpg" 
+                 alt="Irene Mutheu" 
+                 class="rounded-full h-64 w-64 md:h-80 md:w-80 object-cover border-8 border-white shadow-2xl">
+        </div>
+
+        <!-- Original Text Content -->
+        <div class="text-center text-white animate-fade-in">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                Hi, I'm <span class="text-rose-400">Irene Mutheu</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8">
+                <span id="role-switch" class="font-bold">Peagent Model</span> 
+            </p>
+            <a href="#contact" class="bg-rose-600 hover:bg-transparent hover:border hover:border-white hover:text-white text-white px-8 py-3 rounded-full transition-colors">
+                Let's Connect
+            </a>
+        </div>
+        
+        <!-- JavaScript to rotate through roles -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const roles = ["Peagent Model", "Actress", "Influencer", "Brand Ambassador"];
+                let currentRoleIndex = 0;
+                const roleSwitchElement = document.getElementById("role-switch");
+                setInterval(() => {
+                    currentRoleIndex = (currentRoleIndex + 1) % roles.length;
+                    roleSwitchElement.textContent = roles[currentRoleIndex];
+                }, 3000); // changes role every 3 seconds
+            });
+        </script>
+        
+    </div>
+</section>
+
+<style>
+    .image-sharp {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+</style>
+<!-- About Section -->
+<section id="about" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
+        
+        <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <!-- Biography Card -->
+            <div class="bg-rose-50 p-8 rounded-xl shadow-lg animate-fade-in">
+                <h3 class="text-2xl font-bold text-rose-600 mb-4">Biography</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    A passionate Peagent model and actress from Kenya with 2+ years of experience in the 
+                    entertainment industry. Specializing in runway modeling, commercial acting, and brand 
+                    ambassadorship.
+                </p>
+                
+            </div>
+
+            <!-- Experience Timeline -->
+            <div class="space-y-8 animate-fade-in">
+                <!-- Education Card -->
+                <div class="bg-indigo-50 p-6 rounded-xl shadow-lg">
+                    <div class="flex items-start">
+                        <div class="bg-indigo-600 p-3 rounded-lg mr-4">
+                            <i class="fas fa-graduation-cap text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">Education</h4>
+                            <div class="space-y-2">
+                                <p class="font-semibold">Kisii University</p>
+                                <p class="text-sm text-gray-600">Bachelor of Project Management</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Card -->
+                <div class="bg-rose-50 p-6 rounded-xl shadow-lg">
+                    <div class="flex items-start">
+                        <div class="bg-rose-600 p-3 rounded-lg mr-4">
+                            <i class="fas fa-briefcase text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">Experience</h4>
+                            <div class="space-y-2">
+                                <div>
+                                    <p class="font-semibold">Peagent Model - Modelling Association of Kisii University (MAKSU)</p>
+                                    <p class="text-sm text-gray-600">2024-Present</p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Actress - Phanaka Arts Production </p>
+                                    <p class="text-sm text-gray-600">2023-Present</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+               <!-- Skills Card -->
+<div class="bg-indigo-50 p-6 rounded-xl shadow-lg">
+    <div class="flex items-start">
+        <div class="bg-indigo-600 p-3 rounded-lg mr-4">
+            <i class="fas fa-star text-white text-xl"></i>
+        </div>
+        <div>
+            <h4 class="text-xl font-bold mb-2">Skills</h4>
+            <div class="flex flex-wrap gap-4">
+                <!-- Runway Modeling (90%) -->
+                <div class="relative w-24 h-24">
+                    <svg class="w-full h-full -rotate-90" viewBox="0 0 100 100">
+                        <!-- Background circle -->
+                        <circle class="text-gray-300" stroke="currentColor" stroke-width="10" fill="none" cx="50" cy="50" r="45" />
+                        <!-- Animated progress circle -->
+                        <circle class="text-indigo-600 progress progress-circle" stroke="currentColor" stroke-width="10" fill="none"
+                                cx="50" cy="50" r="45" stroke-dasharray="282.743" stroke-dashoffset="282.743" data-target="90" />
+                    </svg>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <span class="text-sm font-bold">Runway</span>
+                    </div>
+                </div>
+                <!-- Character Acting (85%) -->
+                <div class="relative w-24 h-24">
+                    <svg class="w-full h-full -rotate-90" viewBox="0 0 100 100">
+                        <circle class="text-gray-300" stroke="currentColor" stroke-width="10" fill="none" cx="50" cy="50" r="45" />
+                        <circle class="text-rose-600 progress progress-circle" stroke="currentColor" stroke-width="10" fill="none"
+                                cx="50" cy="50" r="45" stroke-dasharray="282.743" stroke-dashoffset="282.743" data-target="85" />
+                    </svg>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <span class="text-sm font-bold">Acting</span>
+                    </div>
+                </div>
+                <!-- Photo Posing (80%) -->
+                <div class="relative w-24 h-24">
+                    <svg class="w-full h-full -rotate-90" viewBox="0 0 100 100">
+                        <circle class="text-gray-300" stroke="currentColor" stroke-width="10" fill="none" cx="50" cy="50" r="45" />
+                        <circle class="text-indigo-600 progress progress-circle" stroke="currentColor" stroke-width="10" fill="none"
+                                cx="50" cy="50" r="45" stroke-dasharray="282.743" stroke-dashoffset="282.743" data-target="80" />
+                    </svg>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <span class="text-sm font-bold">Photo</span>
+                    </div>
+                </div>
+                <!-- Voice Modulation (75%) -->
+                <div class="relative w-24 h-24">
+                    <svg class="w-full h-full -rotate-90" viewBox="0 0 100 100">
+                        <circle class="text-gray-300" stroke="currentColor" stroke-width="10" fill="none" cx="50" cy="50" r="45" />
+                        <circle class="text-rose-600 progress progress-circle" stroke="currentColor" stroke-width="10" fill="none"
+                                cx="50" cy="50" r="45" stroke-dasharray="282.743" stroke-dashoffset="282.743" data-target="75" />
+                    </svg>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <span class="text-sm font-bold">Voice</span>
+                    </div>
+                </div>
+                <!-- Brand Strategy (95%) -->
+                <div class="relative w-24 h-24">
+                    <svg class="w-full h-full -rotate-90" viewBox="0 0 100 100">
+                        <circle class="text-gray-300" stroke="currentColor" stroke-width="10" fill="none" cx="50" cy="50" r="45" />
+                        <circle class="text-indigo-600 progress progress-circle" stroke="currentColor" stroke-width="10" fill="none"
+                                cx="50" cy="50" r="45" stroke-dasharray="282.743" stroke-dashoffset="282.743" data-target="95" />
+                    </svg>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <span class="text-sm font-bold">Brand</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Inline CSS for progress circle animation -->
+<style>
+    .progress-circle {
+        transition: stroke-dashoffset 2s ease;
+    }
+</style>
+
+<!-- JavaScript to animate the progress bars on page load -->
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const circles = document.querySelectorAll('.progress');
+        circles.forEach(circle => {
+            const target = circle.getAttribute('data-target');
+            const percentage = parseFloat(target);
+            const circumference = 282.743; // Circumference for r = 45
+            const offset = circumference * (1 - percentage / 100);
+            // Trigger animation with a slight delay for a smoother effect
+            setTimeout(() => {
+                circle.style.strokeDashoffset = offset;
+            }, 100);
+        });
+    });
+</script>
+
+</section>
+    
+    <!-- What I Do Section -->
+    <section id="what-i-do" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">What I Do</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 bg-rose-50 rounded-lg">
+                    <i class="fas fa-camera text-4xl text-rose-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Fashion Modeling</h3>
+                    <p class="text-gray-600">Runway, editorial, and commercial modeling services</p>
+                </div>
+                <div class="p-6 bg-rose-50 rounded-lg">
+                    <i class="fas fa-film text-4xl text-rose-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Acting</h3>
+                    <p class="text-gray-600">Film, television, and theater performances</p>
+                </div>
+                <div class="p-6 bg-rose-50 rounded-lg">
+                    <i class="fas fa-users text-4xl text-rose-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Brand Partnerships</h3>
+                    <p class="text-gray-600">Brand ambassadorship and product endorsements</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+<section id="testimonials" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Testimonials</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <!-- Modeling Testimonial 1 -->
+            <div class="bg-rose-50 p-6 rounded-xl shadow-lg hover:transform hover:-translate-y-2 transition-all">
+                <div class="flex flex-col items-center mb-4">
+                    <img src="Alexina.jpg" 
+                         alt="Client" 
+                         class="w-20 h-20 rounded-full object-cover mb-4 border-4 border-white shadow">
+                    <h4 class="text-lg font-bold">Alexina Ayega</h4>
+                    <p class="text-sm text-rose-600">Miss Tourism Kisii County 2023/2024</p>
+                </div>
+                <p class="text-gray-600 italic text-center">
+                    "Irene brought our collection to life with her incredible runway presence. Her professionalism and adaptability made her a pleasure to work with."
+                </p>
+            </div>
+
+            <!-- Modeling Testimonial 2 -->
+            <div class="bg-rose-50 p-6 rounded-xl shadow-lg hover:transform hover:-translate-y-2 transition-all">
+                <div class="flex flex-col items-center mb-4">
+                    <img src="steve.png" 
+                         alt="Client" 
+                         class="w-20 h-20 rounded-full object-cover mb-4 border-4 border-white shadow">
+                    <h4 class="text-lg font-bold">Steve Odhiambo</h4>
+                    <p class="text-sm text-rose-600">Mr Kisii University 2018/2019</p>
+                </div>
+                <p class="text-gray-600 italic text-center">
+                    "Her ability to convey emotion through the camera is exceptional. Irene's versatility makes her perfect for any creative project."
+                </p>
+            </div>
+
+            <!-- Acting Testimonial -->
+            <div class="bg-rose-50 p-6 rounded-xl shadow-lg hover:transform hover:-translate-y-2 transition-all">
+                <div class="flex flex-col items-center mb-4">
+                    <img src="danzie.jpg" 
+                         alt="Client" 
+                         class="w-20 h-20 rounded-full object-cover mb-4 border-4 border-white shadow">
+                    <h4 class="text-lg font-bold">Danzie Ledama</h4>
+                    <p class="text-sm text-rose-600">Film Director - Phanaka Arts Production</p>
+                </div>
+                <p class="text-gray-600 italic text-center">
+                    "Irene's dedication to character development is remarkable. She brings depth and authenticity to every role she plays."
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Gallery Section -->
+<section id="gallery" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Gallery</h2>
+        
+        <!-- Tabs Navigation -->
+        <div class="flex justify-center space-x-4 mb-8">
+            <button class="tab-link text-lg font-medium text-rose-600 border-b-2 border-rose-600" data-tab="moments">Moments</button>
+            <button class="tab-link text-lg font-medium text-gray-600 hover:text-rose-600" data-tab="highlights">Highlights</button>
+        </div>
+        
+        <!-- Tab Content: Moments -->
+        <div id="moments" class="tab-content grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Mr & Mrs Kisii University -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-fade-in">
+                <div class="relative group h-[500px]">
+                    <img src="mrs kisii.jpg" 
+                         alt="Mr & Mrs Kisii University" 
+                         class="w-full h-full object-cover object-top">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-6">
+                        <p class="text-white text-center text-lg">Contestant in Mr & Mrs Kisii University 2025/2026</p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-rose-600 mb-2">Mr & Miss Kisii University 2025/2026</h3>
+                    <p class="text-gray-600">
+                        Participated as a finalist in the prestigious university pageant, showcasing talent, intellect, and cultural pride. Demonstrated exceptional stage presence and community leadership values.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Miss Tourism Kisii -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-fade-in">
+                <div class="relative group h-[500px]">
+                    <img src="mrs tourism.jpg" 
+                         alt="Miss Tourism Kisii" 
+                         class="w-full h-full object-cover object-top">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-6">
+                        <p class="text-white text-center text-lg">Finalist in Miss Tourism Kisii 2025/2026</p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-rose-600 mb-2">Miss Tourism Kisii 2025/2026</h3>
+                    <p class="text-gray-600">
+                        Represented Kisii County in the national tourism pageant, promoting local attractions and cultural heritage. Highlighted sustainable tourism initiatives and community development.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Night Shots -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-fade-in">
+                <div class="relative group h-[500px]">
+                    <img src="gallery1.jpg" 
+                         alt="Phanatic Night Shots" 
+                         class="w-full h-full object-cover object-top">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-6">
+                        <p class="text-white text-center text-lg">Phanatic Night Shots</p>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-rose-600 mb-2">Radiant Confidence at Night</h3>
+                    <p class="text-gray-600">
+                        Striking a bold pose under the evening sky, showcasing poise and undeniable energy—an inspiring blend of fashion and fearless self-expression.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Tab Content: Highlights -->
+        <div id="highlights" class="tab-content grid md:grid-cols-2 lg:grid-cols-3 gap-6 hidden">
+            <!-- Studio Shoot -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-fade-in">
+                <div class="relative group h-96">
+                    <img src="gallery2.jpg" 
+                         alt="Studio Shoot" 
+                         class="w-full h-full object-cover object-top">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                </div>
+            </div>
+            
+            <!-- Commercial Shoot -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-fade-in">
+                <div class="relative group h-96">
+                    <img src="gallery3.jpg" 
+                         alt="Commercial Shoot" 
+                         class="w-full h-full object-cover object-top">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                </div>
+            </div>
+            
+            <!-- Backstage -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-fade-in">
+                <div class="relative group h-96">
+                    <img src="gallery4.jpg" 
+                         alt="Backstage" 
+                         class="w-full h-full object-cover object-top">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                </div>
+            </div>
+            
+            <!-- Awards Night -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-fade-in">
+                <div class="relative group h-96">
+                    <img src="gallery5.jpg" 
+                         alt="Awards Night" 
+                         class="w-full h-full object-cover object-top">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                </div>
+            </div>
+            
+            <!-- Press Event -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-fade-in">
+                <div class="relative group h-96">
+                    <img src="gallery6.jpg" 
+                         alt="Press Event" 
+                         class="w-full h-full object-cover object-top">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- JavaScript for Tabs -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const tabLinks = document.querySelectorAll('.tab-link');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Reset all tab links
+                tabLinks.forEach(item => {
+                    item.classList.remove('text-rose-600', 'border-b-2');
+                    item.classList.add('text-gray-600');
+                });
+                // Hide all tab contents
+                tabContents.forEach(content => content.classList.add('hidden'));
+
+                // Activate clicked tab
+                link.classList.add('text-rose-600', 'border-b-2');
+                link.classList.remove('text-gray-600');
+
+                // Show the corresponding tab content
+                const tabId = link.getAttribute('data-tab');
+                document.getElementById(tabId).classList.remove('hidden');
+            });
+        });
+    });
+</script>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Contact Me</h2>
+            <form class="max-w-lg mx-auto" action="https://formspree.io/f/mvoeqzaj" method="POST">
+                <div class="mb-4">
+                    <input type="text" name="name" placeholder="Your Name" class="w-full p-3 border rounded" required>
+                </div>
+                <div class="mb-4">
+                    <input type="email" name="email" placeholder="Your Email" class="w-full p-3 border rounded" required>
+                </div>
+                <div class="mb-4">
+                    <textarea name="message" placeholder="Your Message" class="w-full p-3 border rounded h-32" required></textarea>
+                </div>
+                <button type="submit" class="bg-rose-600 text-white px-8 py-3 rounded hover:bg-rose-700 w-full md:w-auto">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+   <!-- Footer -->
+<footer class="bg-rose-600 text-white py-8">
+    <div class="container mx-auto px-4 text-center space-y-4">
+        <!-- Social Links -->
+        <div class="flex justify-center space-x-6">
+            <a href="https://www.instagram.com/mutheu9924" target="_blank" class="hover:text-rose-200 transition">
+                <i class="fab fa-instagram text-2xl"></i>
+            </a>
+            <a href="https://www.tiktok.com/@user63446595568282" target="_blank" class="hover:text-rose-200 transition">
+                <i class="fab fa-tiktok text-2xl"></i>
+            </a>
+            <a href="https://www.facebook.com/mutheu9924" target="_blank" class="hover:text-rose-200 transition">
+                <i class="fab fa-facebook text-2xl"></i>
+            </a>
+            <a href="https://wa.me/254798627143?text=Hello%20Irene%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20collaboration." 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="hover:text-rose-200 transition" 
+               aria-label="WhatsApp">
+                <i class="fab fa-whatsapp text-2xl"></i>
+            </a>
+            <a href="mailto:mutheui866@gmail.com" class="hover:text-rose-200 transition">
+                <i class="fas fa-envelope text-2xl"></i>
+            </a>
+        </div>
+        
+        <!-- Copyright -->
+        <div>
+            <p>&copy; <span id="currentYear"></span> Irene Mutheu. All rights reserved.</p>
+        </div>
+        
+        <!-- Credit -->
+        <div>
+            <p>
+                This website was crafted by 
+                <a href="https://mwitigideon.netlify.app" target="_blank" class="underline text-white hover:text-rose-200 transition">
+                    GIDEON-MWITI
+                </a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Auto-update the current year in the footer
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+</script>
+
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('show-menu');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('show-menu');
+            });
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Animation on Scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach((section) => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
